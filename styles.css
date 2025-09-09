@@ -4,13 +4,9 @@
     box-sizing: border-box;
     font-family: "Roboto", sans-serif;
 }
+
 main{
-    border-left: 1px dashed #666;
-    margin-left: 20px ;
-    
-}
-header{
-    width: 100%;
+    max-width: 1350px;
 }
 header img{
     position: relative;
@@ -19,13 +15,13 @@ header img{
     object-fit: cover;
 }
 .container{
-    padding: 0 1em 3em;
+    max-width: 1200px;
+    padding: 1em 3em;
     display: grid;
     grid-template-columns: 1fr;
     justify-content: center;
     align-items: center;
     gap: 20px;
-    max-width: 1250px;
 }
 #process{
     font-size: 1.5rem;
@@ -64,20 +60,19 @@ header img{
     color: #705ff2;
     font-weight: 500;
 }
-@media screen and (min-width:1024px) {
+@media(min-width:1024px) {
     .container{
         margin-bottom: 50px;
-       grid-template-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
     }
     main{
         border-left: 1px dashed #666;
-        margin-left: 80px ;
+        margin: 0  auto;
     }
     .features{
         height: 100%;
         min-height:200px;
         display: flex;
-        
         flex-direction: column;
     }
     .about{
@@ -91,13 +86,14 @@ header img{
         max-width: 600px;
     }
 }
-@media screen and (min-width:1280px){
+@media(min-width:1280px){
     .container{
         grid-template-columns: repeat(4, 1fr);
-        row-gap: 100px;
+        row-gap: 50px;
     }
-    main{
-        max-width: 100px;
+    header img{
+        left: 0;
+        width: 100%;
     }
     .about{
         grid-column: 1 / span 4;
@@ -105,7 +101,7 @@ header img{
     .title{
         font-size: 2.5rem;
         margin: 0;
-        max-width: 600px;
+        max-width: 800px;
         margin: 0.8em 0;
     }
 }
